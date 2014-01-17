@@ -1,0 +1,26 @@
+{
+	"name": "data-values/scribunto",
+	"type": "mediawiki-extension",
+	"description": "DataValues implementation as Scribunto plugin",
+	"keywords": [
+		"datavalues"
+	],
+	"license": "GPL-2.0+",
+	"authors": [
+		{
+			"name": "Thomas Pellissier Tanon"
+		}
+	],
+	"support": {
+		"issues": "https://bugzilla.wikimedia.org/",
+		"irc": "irc://irc.freenode.net/wikidata"
+	},
+	"require": {
+		"composer/installers": ">=1.0.1"
+	},
+	"autoload": {
+		"files" : [
+			"DataValuesScribunto.php"
+		]
+	}
+}
