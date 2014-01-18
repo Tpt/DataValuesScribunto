@@ -8,26 +8,37 @@
 local util = require 'libraryUtil'
 local checkType = util.checkType
 
-local StringValue = {
+local StringValue = {}
+setmetatable( StringValue, {
 	__index = mw.dataValues.DataValue
-}
+} );
 
 --[[
-	@param table serialization
+	@param mixed serialization
 	@return StringValue
 ]]--
 function StringValue.newFromSerialization( serialization )
 	checkType( 'newFromSerialization', 1, serialization, 'string' )
 
-	local stringValue = {
+	local dataValue = {
 		_value = serialization
 	}
 
-	setmetatable( stringValue, {
+	setmetatable( dataValue, {
 		__index = StringValue
 	} )
 
-	return stringValue
+	return dataValue
+end
+
+--[[
+	@param string string
+	@return StringValue
+]]--
+function StringValue.newFromString( string )
+	checkType( 'newFromString', 1, string, 'string' )
+
+	return StringValue.newFromSerialization( string )
 end
 
 --[[

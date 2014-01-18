@@ -8,7 +8,7 @@
 local DataValue = {}
 
 --[[
-	@param table serialization
+	@param mixed serialization
 	@return DataValue
 ]]--
 function DataValue.newFromSerialization( serialization )
