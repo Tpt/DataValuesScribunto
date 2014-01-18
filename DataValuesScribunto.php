@@ -22,12 +22,14 @@ $wgAutoloadClasses['DataValues\Scribunto\Hooks'] = $dir . 'src/DataValues/Scribu
 $wgAutoloadClasses['DataValues\Scribunto\Lua\DataValuesLibrary'] = $dir . 'src/DataValues/Scribunto/Lua/DataValuesLibrary.php';
 $wgAutoloadClasses['DataValues\Scribunto\Lua\DataValueLibrary'] = $dir . 'src/DataValues/Scribunto/Lua/DataValueLibrary.php';
 $wgAutoloadClasses['DataValues\Scribunto\Lua\StringValueLibrary'] = $dir . 'src/DataValues/Scribunto/Lua/StringValueLibrary.php';
+$wgAutoloadClasses['DataValues\Scribunto\Lua\GlobeCoordinateValueLibrary'] = $dir . 'src/DataValues/Scribunto/Lua/GlobeCoordinateValueLibrary.php';
 
 $wgHooks['UnitTestsList'][] = function( array &$files ) {
 	$dir = __DIR__ . '/tests/src/DataValues/Scribunto/Lua/';
 
 	$files[] = $dir . 'DataValuesLibraryTest.php';
 	$files[] = $dir . 'StringValueLibraryTest.php';
+	$files[] = $dir . 'GlobeCoordinateValueLibraryTest.php';
 
 	return true;
 };

@@ -16,7 +16,7 @@ use Scribunto_LuaEngineTestBase;
 class DataValuesLibraryTest extends Scribunto_LuaEngineTestBase {
 	protected static $moduleName = 'DataValuesTest';
 
-	function getTestModules() {
+	public function getTestModules() {
 		return parent::getTestModules() + array(
 			'DataValuesTest' => __DIR__ . '/DataValuesTest.lua',
 		);

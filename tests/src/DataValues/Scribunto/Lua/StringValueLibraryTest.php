@@ -15,7 +15,7 @@ use Scribunto_LuaEngineTestBase;
 class StringValueLibraryTest extends Scribunto_LuaEngineTestBase {
 	protected static $moduleName = 'StringValueTest';
 
-	function getTestModules() {
+	public function getTestModules() {
 		return parent::getTestModules() + array(
 			'StringValueTest' => __DIR__ . '/StringValueTest.lua',
 		);
